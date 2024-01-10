@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Gallery</title>
+	<link rel="stylesheet" href="stylesheet2.css">
+	<script>
+        function upDate(previewPic){
+            var image = document.getElementById('image');
+            image.style.backgroundImage = 'url(' + previewPic.src + ')';
+            image.innerHTML = previewPic.alt;
+                 
+        }
+        function unDo(){
+            var image = document.getElementById('image');
+            image.style.backgroundImage = 'none';
+            image.innerHTML = 'Hover over an image below to display here.';
+            
+        }
+    </script>
+</head>
+<body>
+	
+	<div id = "image">
+		Hover over an image below to display here.
+	</div>
+	
+	<img class = "preview" alt = "The Magnificant Faisal Mosque" src = "images/faisal mosque.PNG" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	
+	<img class = "preview" alt = "The Tomb of the Founder of Pakistan (Quaid e Azam)" src = "images/founder.PNG" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	
+	<img class = "preview" alt = "The monument representing Four provinces of Pakistan" src = "images/monument.PNG"  onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+</body>
+</html>
